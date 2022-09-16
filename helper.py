@@ -214,7 +214,6 @@ def fifthmain(image,rate):
                 gama=np.arange(items['r1'],items['r2']+1)
                 U=calU(items)
                 a,b=np.polyfit(gama,U,1)
-                print('Not complete and greater than 70%',i)
                 if (items['r1']!=0):
                     ### 15) a
                     cUpper=a*np.arange(items['r1']) + b
@@ -229,8 +228,6 @@ def fifthmain(image,rate):
                     extlongImg[np.arange(items['r2'],X).astype(int),cLower.astype(int)]=1
                     extlongImg[np.arange(items['r2'],X).astype(int),cLower.astype(int)-1]=1
                     extlongImg[np.arange(items['r2'],X).astype(int),cLower.astype(int)+1]=1
-        else:
-            print('Yes this is complete:',i)
     return extlongImg
 
 ##########################################################
